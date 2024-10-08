@@ -1,5 +1,6 @@
 import numpy as np 
 import random
+import panda as pd
 
 def fuzzy_weather(temp):
     if temp > 30:
@@ -33,5 +34,14 @@ def simulate_weather(num_days, initial_temp):
     
     return weather_sequence
 
+
+def save_to_excel(weather_sequence, filename)
+    df = pd.DataFrame(weather_sequence, columns=["Weather"])
+    df.to_excel(filename, index=False)
+
 weather_sequence = simulate_weather(10, 25)
 print("weater forecast for the next day : ",weather_sequence)
+
+#save to excel
+save_to_excel(weather_sequence, "weather_forecast.xlsx")
+print("weather forecast saved")
